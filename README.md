@@ -80,6 +80,7 @@ async function getStockPriceByName(name) {
 * 500 内部服务器错误
 * 301 资源被永久转移到其它URL
 * 100 继续,客户端应继续其请求
+
 分类：
 * 1xx 信息
 * 2xx 成功
