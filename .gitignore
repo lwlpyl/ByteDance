@@ -1,3 +1,4 @@
 
 .project
 .settings/org.eclipse.core.resources.prefs
+*.exe
