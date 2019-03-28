@@ -3,7 +3,7 @@
 
 第四题:
 有N根绳子，第i根长为Li，现需要m根等长绳子。
-你可以对n根绳子进行任意剪裁(不能拼接)，计算出这m根绳子最长的长度是多少?
+你可以对N根绳子进行任意剪裁(不能拼接)，计算出这m根绳子最长的长度是多少?
 
 求解思路：二分法 
 **/ 
@@ -24,16 +24,19 @@ int check(int n, int len[], double mid){
 
 double getAns(int n, int m, int len[]){
 	double ans = 0;
-	double sum = 0; //总绳长
+	double max = 0; // 最长的那根绳子的长度 
 	int i;
 	double l, r, mid;
-	for(i=0; i<n; i++){
-		sum += len[i];
+	
+	for(i=1; i<n; i++){
+		if(len[i]>max){
+			max = len[i];
+		}
 	} 
 	
 	// 二分法 
 	l = 0;
-	r = sum;
+	r = max;
 	while((r-l)>1e-4){
 		mid = (l+r)/2;
 		if(mid==0){
