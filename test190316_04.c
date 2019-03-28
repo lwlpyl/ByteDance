@@ -28,7 +28,7 @@ double getAns(int n, int m, int len[]){
 	int i;
 	double l, r, mid;
 	
-	for(i=1; i<n; i++){
+	for(i=0; i<n; i++){
 		if(len[i]>max){
 			max = len[i];
 		}
